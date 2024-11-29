@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/Shria/OneDrive/Desktop/Coding/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eco Game - Engage in mini-games to learn about environmental sustainability.">
+    <meta name="keywords" content="eco game, green revolution, sustainability, environmental games">
+    <title>Eco Game - The Green Revolution By Shriansh Devadiga </title>
+    <link rel="stylesheet" href="./Eco Game - The Green Revolution_files/aos.css">
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f7f8fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #006c35, #009688);
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        header h1:hover {
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            margin-top: 10px;
+            padding: 10px 25px;
+            font-size: 1rem;
+            background: #34a853;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background: #2e7d32;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Section Styling */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        section:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            font-size: 2.4rem;
+            color: #006c35;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: bold;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(to right, #34a853, #006c35);
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f0f9e9;
+            border-left: 6px solid #006c35;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .card:hover {
+            background: linear-gradient(to bottom, #c8e6c9, #a5d6a7);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            max-width: 120px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card img:hover {
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            font-size: 1.7rem;
+            color: #006c35;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #006c35;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+
+        img {
+            border-radius: 17px;
+        }
+         /* Logo Styling */
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            right:20px;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px; /* Optional for rounded edges */
+        }
+
+    </style>
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+        <div class="logo-container">
+        <img src="./Eco Game - The Green Revolution_files/green revolution (1).webp" alt="Eco Game Logo">
+    </div>
+    <header>
+        <h1>The Green Revolution</h1>
+        <p>Take action to protect our planet</p>
+        <a href="file:///C:/Users/Shria/OneDrive/Desktop/Coding/preindex.html"><button class="cta-button">Explore Now</button></a>
+    </header>
+
+    <main>
+        <!-- Goals Section -->
+        <section id="goals" data-aos="fade-up" class="aos-init aos-animate">
+            <h2>Green Revolution</h2>
+            <p>Our team is taking a big step towards providing and informing people about living a sustainable lifestyle.</p>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./Eco Game - The Green Revolution_files/OIP.f9bD4Zh8RWtc4sjynhKglwHaE7" alt="Website">
+                    <h3>WebSite</h3>
+                    <p>We are using this website to inform people about various environmental challenges and provide engaging ways to learn about solutions in an entertaining manner.</p>
+                </div>
+                <div class="card">
+                    <img src="./Eco Game - The Green Revolution_files/OIG1.3t0gL.Ifg2ms9E4bnf9c" alt="MiniGames">
+                    <h3>MiniGames</h3>
+                    <p>We have provided several mini-games to help you learn about the challenges our planet faces and how we can act to address them in an interactive way.</p>
+                </div>
+                
+                <div class="card">
+                    <img src="./Eco Game - The Green Revolution_files/uae-flag.jpg" alt="UAE Flag">
+                    <h3>Eid Al Etihad</h3>
+                    <p>We have a dedicated webpage that outlines what the UAE government is doing to address environmental issues within the country.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Eco Game | All rights reserved.</p>
+    </footer>
+
+    <!-- Animation on Scroll -->
+    <script src="./Eco Game - The Green Revolution_files/aos.js.download"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///C:/Users/Shria/OneDrive/Desktop/uPDATED%20cODE/uae.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Al Ittihad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f8fc;
+            background-image: url("https://th.bing.com/th/id/OIG2.THYvjFfGP.4WHfBumUx7?w=1024&h=1024&rs=1&pid=ImgDetMain");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: rgba(0, 0, 0, 0.2);
+            background-blend-mode: overlay;
+            color: white;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header {
+            background: linear-gradient(to right, #006c35, #009688);
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        header h1:hover {
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            margin-top: 10px;
+            padding: 10px 25px;
+            font-size: 1rem;
+            background: #34a853;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background: #2e7d32;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        section:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            font-size: 2.4rem;
+            color: #006c35;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: bold;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(to right, #34a853, #006c35);
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .button.blue {
+            background-color: #007bff;
+        }
+
+        .button.green {
+            background-color: #28a745;
+        }
+
+        .button.red {
+            background-color: #dc3545;
+        }
+
+        .button.blue:hover {
+            background-color: #0056b3;
+        }
+
+        .button.green:hover {
+            background-color: #218838;
+        }
+
+        .button.red:hover {
+            background-color: #c82333;
+        }
+
+        footer {
+            background: #006c35;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+            }
+
+            .button {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 230px;
+            height: 165px;
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eid Al Ittihad</h1>
+        <p>Celebrating Unity</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Eid Al Ittihad</h2>
+
+            <!-- Updated video element -->
+            <video controls="">
+                <source src="C:\Users\Shria\Downloads\Great Game&#39;s Video - Nov 27, 2024.mp4" type="video/mp4">
+                
+            </video>
+            <p style="font-weight: bold;">UAE initiatives towards the SDGs are vital, and we are here to show them to you.</p>
+        </section>
+
+        <div class="button-container">
+            <a href="file:///C:/Users/Shria/OneDrive/Desktop/Coding/sdggoals.html" class="button blue">Go back to SDG page</a>
+        </div>
+        <div class="button-container">
+            <a href="file:///C:/Users/Shria/OneDrive/Desktop/Coding/index.html" class="button blue">Go back to main menu</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>2024 © Green Revolution - All Rights Reserved</p>
+    </footer>
+
+
+</body></html>

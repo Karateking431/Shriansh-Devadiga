@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///C:/Users/Shria/OneDrive/Desktop/Coding/preindex.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Game - Green Revolution</title>
+    <link href="./Eco Game - Green Revolution_files/aos.css" rel="stylesheet">
+    <style>
+    /* General Styling */
+    img {
+        border-radius:17px;
+    }
+        body {
+            background: linear-gradient(to bottom right, #25661d, #1a5f5f);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        :root {
+            --primary-color: #25661d;
+            --secondary-color: #1a5f5f;
+            --button-gradient: linear-gradient(45deg, #4caf50, #2e7d32);
+            --hover-gradient: linear-gradient(45deg, #43a047, #1b5e20);
+            --dark-bg: #121212;
+            --dark-text: #f0f4c3;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideIn 1.5s ease-out;
+        }
+
+       h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #A8D08D; /* Celker green color */
+    animation: pulse 2s infinite alternate;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+        h1:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            padding: 30px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeInContent 1s ease-out;
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .game-section {
+            display: inline-block;
+            width: 28%;
+            margin: 10px;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+
+        .game-section:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            background-color: #c5e1a5;
+        }
+
+        .game-section img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .game-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .game-section p {
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .game-section p:hover {
+            color: #1b5e20;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 18px;
+            color: white;
+            background: var(--button-gradient);
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            margin-top: 30px;
+        }
+
+        button:hover {
+            background: var(--hover-gradient);
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            text-align: center;
+            animation: fadeInFooter 1s ease-in;
+        }
+
+        @keyframes fadeInFooter {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .game-section {
+                width: 45%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .game-section {
+                width: 90%;
+            }
+
+            button {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <header>
+        <h1>The Green Revolution</h1>
+        <p>Join the fight for a greener future, and discover how we can save our planet.</p>
+    </header>
+
+    <div class="content">
+        <!-- Interactive game section with click functionality -->
+        <div class="game-section aos-init aos-animate" data-aos="fade-up" onclick="alert(&#39;Thank you for your interest! We can save the planet together!&#39;)">
+            <img src="./Eco Game - Green Revolution_files/handdrawn-earth-depicting-climate-crisis_961038-45008.jpg" alt="Tree Planting">
+            <h2>What Our Planet Faces</h2>
+            <p>Every year, millions of trees are cut down, contributing to deforestation and harming the environment. Learn how you can help preserve our planet.</p>
+            <a href="file:///C:/Users/Shria/OneDrive/Desktop/Coding/solution.html"><button>Learn More</button></a>
+        </div>
+
+        <div class="game-section aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <img src="./Eco Game - Green Revolution_files/earth-s-temperature-rising_1032681-188.jpg" alt="Climate Change">
+            <h2>Climate Change and Its Impact</h2>
+            <p>Learn about how climate change is affecting our ecosystems and what actions can be taken to mitigate its effects.</p>
+            <a href="file:///C:/Users/Shria/OneDrive/Desktop/Coding/solution.html"><button>Learn More</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Eco Game | All rights reserved.</p>
+    </footer>
+
+    <script src="./Eco Game - Green Revolution_files/aos.js.download"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate on Scroll)
+
+        // Interactive Pop-up alert on button click or game section click
+        document.querySelectorAll('.game-section').forEach(section => {
+            section.addEventListener('click', function () {
+                alert('Thank you for exploring! Together, we can make a difference!');
+            });
+        });
+    </script>
+
+
+</body></html>

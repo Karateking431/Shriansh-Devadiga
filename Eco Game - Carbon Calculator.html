@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)file:///C:/Users/Shria/OneDrive/Desktop/uPDATED%20cODE/carbon%20emissions.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Game - Carbon Calculator</title>
+    <style>
+        /* General Styling */
+        body {
+            background: linear-gradient(135deg, #43a047, #2e7d32);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in;
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            padding: 20px;
+            background: linear-gradient(to right, #2e7d32, #66bb6a);
+            color: #ffffff;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            animation: textGlow 2s infinite;
+        }
+
+        @keyframes textGlow {
+            0%, 100% {
+                text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.6);
+            }
+
+            50% {
+                text-shadow: 2px 2px 12px rgba(255, 255, 255, 1);
+            }
+        }
+
+        h1:hover {
+            color: #a5d6a7;
+            transform: scale(1.05);
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 800px;
+            background: rgba(0, 150, 136, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: slideIn 0.6s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .content iframe {
+            width: 485px;
+            height: 402px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #e0f7fa;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Buttons */
+        button {
+            display: inline-block;
+            width: 320px;
+            padding: 15px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #4caf50, #388e3c);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #66bb6a, #43a047);
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        /* Main Section Styling */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            font-size: 2.4rem;
+            color: #006c35;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        section h2:hover {
+            color: #43a047;
+            transform: scale(1.05);
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(to right, #34a853, #006c35);
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        section p:hover {
+            color: #388e3c;
+            transform: scale(1.05);
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f0f9e9;
+            border-left: 6px solid #006c35;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .card:hover {
+            background: linear-gradient(to bottom, #c8e6c9, #a5d6a7);
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            max-width: 120px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card img:hover {
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            font-size: 1.7rem;
+            color: #006c35;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .card h3:hover {
+            color: #43a047;
+            transform: scale(1.05);
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.4;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .card p:hover {
+            color: #388e3c;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: linear-gradient(to right, #004d40, #2e7d32);
+            color: white;
+            width: 100%;
+            text-align: center;
+            animation: fadeInFooter 2s ease-out;
+        }
+
+        @keyframes fadeInFooter {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        footer p:hover {
+            color: #66bb6a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>The Green Revolution</h1>
+    </header>
+
+    <main>
+        <section id="goals">
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./Eco Game - Carbon Calculator_files/OIP.f9bD4Zh8RWtc4sjynhKglwHaE7" alt="Carbon Calculator">
+                    <h3>Carbon Calculator</h3>
+                    <p>This tool asks questions regarding your daily lifestyle to calculate your carbon points and assess your sustainability. You can specify how many trees to plant and track your carbon reduction contributions.</p>
+                    <a href="file:///C:/Users/Shria/OneDrive/Desktop/Coding/carbonstuff.html">
+                        <button>Go To</button>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="./Eco Game - Carbon Calculator_files/OIG1.3t0gL.Ifg2ms9E4bnf9c" alt="Carbon Trading Game">
+                    <h3>Carbon Trading Game</h3>
+                    <p>Manage emissions while maximizing profits. Innovate with sustainable solutions, trade carbon credits, and adapt to market and policy changes to balance profit and sustainability!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div>
+        <a href="file:///C:/Users/Shria/OneDrive/Desktop/uPDATED%20cODE/page2.html">
+            <button>Go back to Prize Page</button>
+        </a>
+    </div>
+
+    <footer>
+        <p>© 2024 Eco Game | All rights reserved.</p>
+    </footer>
+
+
+
+</body></html>
